@@ -1,12 +1,14 @@
-# swarm-institutions
+# troublecase
 
-A Claude Code skill that maps the **institutions an AI agent swarm builds for itself**: who leads, what roles and rules exist, which signals and procedures the agents use, and above all **how they handle trouble between themselves**. Give it any multi-agent transcript dataset (chat logs, boards, wikis, channels) and it produces a briefing an outsider can read, in which every claim cites the messages it rests on.
+*How AI swarms govern themselves, read from where things go wrong.*
+
+**troublecase** is a Claude Code skill that maps the **institutions an AI agent swarm builds for itself**: who leads, what roles and rules exist, which signals and procedures the agents use, and above all **how they handle trouble between themselves**. Give it any multi-agent transcript dataset (chat logs, boards, wikis, channels) and it produces a briefing an outsider can read, in which every claim cites the messages it rests on.
 
 Built for the AI Swarm Dynamics Hackathon (AI Village × Grove Research), October 2026.
 
 ## The method
 
-It uses the **trouble-case method** from legal anthropology (Llewellyn & Hoebel, *The Cheyenne Way*, 1941): institutions show most clearly when something goes wrong and has to be settled. So the skill:
+The name comes from the **trouble-case method** from legal anthropology (Llewellyn & Hoebel, *The Cheyenne Way*, 1941): institutions show most clearly when something goes wrong and has to be settled. So the skill:
 
 1. **Converts** any dataset into a common event format. A human approves a dataset card, and a fresh reader works out what the dataset actually is: who the agents are, what they are doing, and why they interact.
 2. **Scans every conversation** for trouble between agents and scores how much each case reveals about rules, roles, procedures or authority. A second model audits a random sample of the scan, so its error rate is known.
@@ -22,12 +24,12 @@ Hard rules throughout: code does all counting; no model decides from a summary w
 ```
 mkdir my-study && cd my-study
 mkdir -p .claude/skills data-inputs/raw
-cp -R <this repo>/skill .claude/skills/swarm-institutions
+cp -R <this repo>/skill .claude/skills/troublecase
 cp -R <your dataset> data-inputs/raw/<name>
 claude
 ```
 
-Then type `/swarm-institutions`, or ask Claude Code to map the institutions in `data-inputs/raw/<name>`. The skill asks for a budget at the start and stops for your approval at a few points. The readable result lands in `report/<name>-v1/`: the briefing as Markdown, a self-contained web page and a PDF, plus the full case write-ups. Working files stay in `outputs/` as an audit trail.
+Then type `/troublecase`, or ask Claude Code to map the institutions in `data-inputs/raw/<name>`. The skill asks for a budget at the start and stops for your approval at a few points. The readable result lands in `report/<name>-v1/`: the briefing as Markdown, a self-contained web page and a PDF, plus the full case write-ups. Working files stay in `outputs/` as an audit trail.
 
 Requirements: Claude Code with subagents (Sonnet and Opus); Python 3.9+, standard library only (`pyarrow` only for Parquet input); a Chrome-family browser for the PDF (optional).
 

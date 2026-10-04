@@ -1,9 +1,9 @@
 ---
-name: swarm-institutions
+name: troublecase
 description: Map the institutions an AI agent swarm built for itself (roles, rules, signals, how trouble between agents is settled) from any multi-agent transcript dataset, as a working model of how the society works, tested on random cases, with an evidence-backed briefing in which every claim cites quoted, checkable evidence. Uses the trouble-case method from legal anthropology. Use when given a dataset of agents interacting (chat logs, boards, wikis, channels) and asked what social order they formed.
 ---
 
-# Swarm institutions: from raw transcripts to an institutional briefing
+# troublecase: how AI swarms govern themselves, read from where things go wrong
 
 ## Purpose and stance
 

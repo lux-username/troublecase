@@ -1,6 +1,6 @@
 ---
 name: convert-dataset
-description: Convert an unknown multi-agent transcript dataset (JSONL, JSON, CSV, Parquet or zip) into the common event format used by the swarm-institutions skill. Profiles the data with code, writes a dataset card, waits for human approval, generates a dataset-specific adapter, and validates the result against the raw data. Use as step 0, before segmenting and triage.
+description: Convert an unknown multi-agent transcript dataset (JSONL, JSON, CSV, Parquet or zip) into the common event format used by the troublecase skill. Profiles the data with code, writes a dataset card, waits for human approval, generates a dataset-specific adapter, and validates the result against the raw data. Use as step 0, before segmenting and triage.
 ---
 
 # Convert a dataset into events

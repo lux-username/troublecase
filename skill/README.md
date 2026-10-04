@@ -1,4 +1,4 @@
-# swarm-institutions (skill)
+# troublecase (skill)
 
 Maps the institutions an AI agent swarm built for itself, from any multi-agent transcript dataset. It finds the trouble episodes that reveal most, builds a mechanism-level model of how the society works, tests that model on random episodes, and writes a checked briefing. `SKILL.md` has the method and run order.
 
